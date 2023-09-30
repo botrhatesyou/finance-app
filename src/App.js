@@ -1,7 +1,7 @@
 // src/App.js
 
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; // Change Switch to Routes
 import LandingPage from './components/LandingPage';
 import LoginPage from './components/LoginPage';
 import SignupPage from './components/SignupPage';
@@ -17,14 +17,14 @@ function App() {
         <Router>
             <div className="App">
                 <Navbar/>
-                <Switch>
-                    <Route path="/" exact component={LandingPage} />
-                    <Route path="/login" component={LoginPage} />
-                    <Route path="/signup" component={SignupPage} />
-                    <Route path="/dashboard" component={Dashboard} />
-                    <Route path="/expenses" component={Expenses}/>
-                    <Route path="/categories" component={Categories}/>
-                </Switch>
+                <Routes> 
+                    <Route path="/" element={<LandingPage />} /> 
+                    <Route path="/login" element={<LoginPage />} />
+                    <Route path="/signup" element={<SignupPage />} />
+                    <Route path="/dashboard" element={<Dashboard />} />
+                    <Route path="/expenses" element={<Expenses />} />
+                    <Route path="/categories" element={<Categories />} />
+                </Routes>
                 <Footer/>
             </div>
         </Router>
