@@ -1,0 +1,110 @@
+.dashboard-container {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.dashboard-header {
+  font-size: 24px;
+  font-family: "Arial-Regular", Helvetica;
+  color: #000000;
+  margin-top: 15px;
+}
+
+.categories-section, .expenses-section {
+  width: 1186px;
+  border: 1px solid #cccccc;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.categories-header, .expenses-header {
+  font-size: 20px;
+  font-family: "Arial-Regular", Helvetica;
+  color: #000000;
+  margin-bottom: 20px;
+}
+
+.category-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.expense-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  position: relative; /* Added this */
+}
+
+.expense-item > div:nth-child(2) { /* Targeting the price div */
+  position: absolute;
+  left: 400px; /* Adjust this value to set the distance from the left side of the .expense-item */
+}
+
+.expense-item > div:nth-child(3) { /* Targeting the date div */
+  position: absolute;
+  left: 750px; /* Adjust this value to set the distance from the left side of the .expense-item */
+}
+
+.filter-section {
+  width: 1186px;
+  border: 1px solid #cccccc;
+  padding: 20px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.filter-header {
+  font-size: 20px;
+  font-family: "Arial-Regular", Helvetica;
+  color: #000000;
+  margin-bottom: 20px;
+}
+
+.filter-inputs {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+input[type="date"] {
+  border: 2px solid #767676;
+  height: 34px;
+  width: 162px;
+}
+
+.filter-button {
+  background-color: #ffffff;
+  border: 1px solid #000000;
+  height: 37px;
+  font-size: 13px;
+  font-family: "Arial-Regular", Helvetica;
+  color: #000000;
+  cursor: pointer;
+  align-self: center;
+}
+
+.filter-button:hover {
+  background-color: #f8f8f8;
+}
+
+.total-expense {
+  font-size: 16px;
+  font-family: "Arial-Regular", Helvetica;
+  color: #000000;
+  align-self: center;
+}
+
+.error {
+  color: red;
+  font-weight: bold;
+  margin-bottom: 10px;
+}

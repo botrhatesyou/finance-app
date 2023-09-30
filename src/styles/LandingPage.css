@@ -1,0 +1,54 @@
+.landing-page {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 92vh; /* Reduced height to 80% of the viewport height */
+  width: 100%;
+}
+
+.hero-section {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.hero-section h1 {
+  color: #000000;
+  font-family: "Arial-Regular", Helvetica;
+  font-size: 50px;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.hero-section p {
+  color: #000000;
+  font-family: "Arial-Regular", Helvetica;
+  font-size: 20px;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 20px; /* Adjusted margin for better spacing */
+}
+
+.btn-signup, .btn-login {
+  background-color: #000000;
+  color: #ffffff;
+  font-family: "Arial-Regular", Helvetica;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  margin: 5px;
+  transition: background-color 0.3s;
+}
+
+.btn-signup:hover, .btn-login:hover {
+  background-color: #333333;
+}

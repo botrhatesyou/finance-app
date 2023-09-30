@@ -1,0 +1,98 @@
+/* CategoriesPage.css */
+
+.categories-container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  height: 81vh;
+}
+
+.categories-title, .section-title, .list-title {
+  font-family: "Arial-Regular", Helvetica;
+  color: #000000;
+  margin-bottom: 20px;
+}
+
+.error-message {
+  color: red;
+  font-weight: bold;
+  margin-bottom: 20px;
+  border: 1px solid red;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.category-input {
+  padding: 10px;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  margin-right: 10px;
+  width: 250px;
+  height: 35px;
+}
+
+.add-btn, .update-btn, .edit-btn, .delete-btn {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: #000000;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.add-btn:hover, .update-btn:hover, .edit-btn:hover, .delete-btn:hover {
+  background-color: #333333;
+}
+
+.category-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.category-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #cccccc;
+}
+
+.category-item:last-child {
+  border-bottom: none;
+}
+
+.edit-btn, .delete-btn {
+  margin-left: 10px;
+}
+
+.category-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #cccccc;
+}
+
+.category-name {
+  flex: 1; /* This ensures that the category name takes up all available space */
+  max-width: 70%; /* Adjust this value based on your design preference */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.edit-btn, .delete-btn {
+  margin-left: 50px;
+  margin-right: 50px;
+  width: 80px; /* Fixed width for buttons */
+}
+
+.buttons-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 30%; /* Adjust this value based on your design preference */
+}
