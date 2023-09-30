@@ -1,14 +1,13 @@
-// src/components/Navbar.js
-
 import React from 'react';
-import { Link, withRouter } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
-function Navbar(props) {
+function Navbar() {
   const token = localStorage.getItem('token');
+  const navigate = useNavigate();
 
   function handleLogout() {
     localStorage.removeItem('token');
-    props.history.push('/login');
+    navigate('/login');
   }
 
   if (!token) return null; // Don't render the navbar if the user is not logged in
@@ -28,4 +27,4 @@ function Navbar(props) {
   );
 }
 
-export default withRouter(Navbar);
+export default Navbar;
