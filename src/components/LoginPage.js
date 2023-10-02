@@ -1,14 +1,17 @@
 // src/components/LoginPage.js
 
 import React, { useState } from 'react';
+import { Link, useHistory } from 'react-router-dom';
 import '../styles/LoginPage.css';
 import axios from 'axios';
 import { API_BASE_URL } from './config';
+
 
 function LoginPage() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
+    const history = useHistory();
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -19,7 +22,7 @@ function LoginPage() {
         }).then(response => {
             if (response.data) {
                 localStorage.setItem('token', response.data);
-                window.location.href = '/dashboard';
+                history.push('/dashboard');
             }
         }).catch(err => {
             if (err.response && err.response.data) {
@@ -52,7 +55,7 @@ function LoginPage() {
                     </div>
                     <button type="submit" className="btn-login">Login</button>
                     <p className="switch-page">
-                        Don't have an account? <a href="/signup">Sign up</a>
+                        Don't have an account? <Link to="/signup">Sign up</Link>
                     </p>
                 </form>
             </div>
