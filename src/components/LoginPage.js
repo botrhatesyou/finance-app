@@ -13,13 +13,13 @@ function LoginPage() {
     const handleSubmit = (e) => {
         e.preventDefault();
     
-        axios.post(`${API_BASE_URL}api/login`, { // Use the base URL
+        axios.post(`${API_BASE_URL}/api/login`, { // Use the base URL
             email: email,
             password: password
         }).then(response => {
             if (response.data) {
                 localStorage.setItem('token', response.data);
-                window.location.href = 'dashboard';
+                window.location.href = '/dashboard';
             }
         }).catch(err => {
             if (err.response && err.response.data) {

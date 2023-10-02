@@ -12,7 +12,7 @@ function CategoriesPage() {
   const [expenses, setExpenses] = useState([]);
 
   useEffect(() => {
-    axios.get(`${API_BASE_URL}api/expenses`, { // Use the base URL
+    axios.get(`${API_BASE_URL}/api/expenses`, { // Use the base URL
       headers: {
         'Authorization': `Bearer ${token}`
       }
@@ -22,7 +22,7 @@ function CategoriesPage() {
   }, [token]);
 
   useEffect(() => {
-    axios.get(`${API_BASE_URL}api/categories`, { // Use the base URL
+    axios.get(`${API_BASE_URL}/api/categories`, { // Use the base URL
       headers: {
         'Authorization': `Bearer ${token}`
       }
@@ -40,7 +40,7 @@ function CategoriesPage() {
     const category = {
         name
     };
-    axios.post(`${API_BASE_URL}api/categories`, category, { // Use the base URL
+    axios.post(`${API_BASE_URL}/api/categories`, category, { // Use the base URL
         headers: {
             'Authorization': `Bearer ${token}`
         }
@@ -60,7 +60,7 @@ const handleUpdateCategory = (categoryId) => {
   const category = {
       name
   };
-  axios.put(`${API_BASE_URL}api/categories/${categoryId}`, category, { // Use the base URL
+  axios.put(`${API_BASE_URL}/api/categories/${categoryId}`, category, { // Use the base URL
       headers: {
           'Authorization': `Bearer ${token}`
       }
@@ -81,7 +81,7 @@ const handleDeleteCategory = (categoryId) => {
       return;
   }
 
-  axios.delete(`${API_BASE_URL}api/categories/${categoryId}`, { // Use the base URL
+  axios.delete(`${API_BASE_URL}/api/categories/${categoryId}`, { // Use the base URL
       headers: {
           'Authorization': `Bearer ${token}`
       }

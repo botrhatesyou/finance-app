@@ -17,7 +17,7 @@ function Expenses() {
   const token = localStorage.getItem('token');
 
   useEffect(() => {
-    axios.get(`${API_BASE_URL}api/expenses`, {
+    axios.get(`${API_BASE_URL}/api/expenses`, {
       headers: {
         'Authorization': `Bearer ${token}`
       }
@@ -25,7 +25,7 @@ function Expenses() {
       setExpenses(response.data);
     });
 
-    axios.get(`${API_BASE_URL}api/categories`, {
+    axios.get(`${API_BASE_URL}/api/categories`, {
       headers: {
         'Authorization': `Bearer ${token}`
       }
@@ -51,7 +51,7 @@ function Expenses() {
       notes
     };
 
-    axios.post(`${API_BASE_URL}api/expenses`, expense, {
+    axios.post(`${API_BASE_URL}/api/expenses`, expense, {
       headers: {
         'Authorization': `Bearer ${token}`
       }
@@ -74,7 +74,7 @@ function Expenses() {
       categoryId,
       notes
     };
-    axios.put(`${API_BASE_URL}api/expenses/${expenseId}`, expense, {
+    axios.put(`${API_BASE_URL}/api/expenses/${expenseId}`, expense, {
       headers: {
         'Authorization': `Bearer ${token}`
       }
@@ -91,7 +91,7 @@ function Expenses() {
   };
 
   const handleDeleteExpense = (expenseId) => {
-    axios.delete(`${API_BASE_URL}api/expenses/${expenseId}`, {
+    axios.delete(`${API_BASE_URL}/api/expenses/${expenseId}`, {
       headers: {
         'Authorization': `Bearer ${token}`
       }

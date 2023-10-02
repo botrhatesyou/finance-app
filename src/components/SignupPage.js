@@ -17,7 +17,7 @@ function SignupPage() {
         }
 
         // Make a POST request to the backend's signup endpoint
-        axios.post(`${API_BASE_URL}api/signup`, {
+        axios.post(`${API_BASE_URL}/api/signup`, {
             email: email,
             password: password
         })
@@ -25,7 +25,7 @@ function SignupPage() {
             // Handle the response from the backend
             if (response.data.success) {
                 alert('Signup successful! Please check your email for confirmation.');
-                window.location.href = 'login';
+                window.location.href = '/login';
             } else {
                 setError(response.data.message);
             }
