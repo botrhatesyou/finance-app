@@ -17,7 +17,7 @@ function Dashboard() {
 
   useEffect(() => {
     // Fetch categories
-    axios.get(`${API_BASE_URL}/api/categories`, {  // Use the base URL
+    axios.get(`${API_BASE_URL}api/categories`, {  // Use the base URL
       headers: {
         'Authorization': `Bearer ${token}`
       }
@@ -26,7 +26,7 @@ function Dashboard() {
     });
 
     // Fetch expenses
-    axios.get(`${API_BASE_URL}/api/expenses`, {  // Use the base URL
+    axios.get(`${API_BASE_URL}api/expenses`, {  // Use the base URL
       headers: {
         'Authorization': `Bearer ${token}`
       }
@@ -51,7 +51,7 @@ function Dashboard() {
       return;
     }
     // Filter expenses by date
-    axios.get(`${API_BASE_URL}/api/reports/filter?startDate=${startDate}&endDate=${endDate}`, {  // Use the base URL
+    axios.get(`${API_BASE_URL}api/reports/filter?startDate=${startDate}&endDate=${endDate}`, {  // Use the base URL
       headers: {
         'Authorization': `Bearer ${token}`
       }
@@ -60,7 +60,7 @@ function Dashboard() {
       setErrorMessage('');
     });
 
-    axios.get(`${API_BASE_URL}/api/reports/total?startDate=${startDate}&endDate=${endDate}`, {  // Use the base URL
+    axios.get(`${API_BASE_URL}api/reports/total?startDate=${startDate}&endDate=${endDate}`, {  // Use the base URL
       headers: {
         'Authorization': `Bearer ${token}`
       }
