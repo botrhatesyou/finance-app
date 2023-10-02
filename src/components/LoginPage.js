@@ -1,17 +1,15 @@
 // src/components/LoginPage.js
 
 import React, { useState } from 'react';
-import { Link, useHistory } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import '../styles/LoginPage.css';
 import axios from 'axios';
 import { API_BASE_URL } from './config';
-
 
 function LoginPage() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
-    const history = useHistory();
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -22,7 +20,7 @@ function LoginPage() {
         }).then(response => {
             if (response.data) {
                 localStorage.setItem('token', response.data);
-                history.push('/dashboard');
+                window.location.href = '/dashboard';
             }
         }).catch(err => {
             if (err.response && err.response.data) {
